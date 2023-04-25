@@ -6,6 +6,9 @@ import ErrorPage from "./components/404"
 import React, { useState } from "react";
 import preloader from './assets/preloader.gif'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { inject } from '@vercel/analytics';
+ 
+inject();
 
 function App() {
 
