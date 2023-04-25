@@ -8,7 +8,8 @@ const Aim = () => {
           <div className="text-lg md:text-2xl font-medium font-serif text-[#1E90FF]">
             Our Aim
           </div>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          To provide college students a pedestal to bring their startups to
+          great heights
         </div>
       </div>
       <div className="flex md:grid md:grid-cols-3 gap-5 items-center justify-center flex-col md:flex-row">
