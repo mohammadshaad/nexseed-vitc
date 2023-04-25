@@ -9,21 +9,22 @@ const Obj = () => {
           We bring extra value to ...
         </div>
       </div>
-      <div className="flex md:w-1/2 flex-col md:flex-row md:space-x-5 gap-6 md:p-0">
-        <div className="flex flex-col border-2 border-gray-800 rounded-lg">
+      <div className="flex md:w-1/2 flex-col md:grid md:grid-cols-2 gap-6 md:p-0">
+        <div className="flex flex-col border-2 border-gray-800 rounded-lg p-5">
           <div className="text-6xl md:text-9xl text-white ">
-            <CountUp start={0} end={2} duration={0.5} />x
+            <CountUp start={0} end={2} duration={10} />x
           </div>
           <div className="text-xl font-thin text-gray-400 ">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            We increase awareness about startups amongst young minds and
+            encourage them and once their ideas grow
           </div>
         </div>
-        <div className="flex flex-col border-2 border-gray-800 rounded-lg">
+        <div className="flex flex-col border-2 border-gray-800 rounded-lg p-5">
           <div className="text-6xl md:text-9xl text-white ">
-            <CountUp start={0} end={8} duration={1} />x
+            <CountUp start={0} end={8} duration={10} />x
           </div>
           <div className="text-xl font-thin text-gray-400 ">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            We provide the necessity amenities to help them acheive heights.
           </div>
         </div>
       </div>
