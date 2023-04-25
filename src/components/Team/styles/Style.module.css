@@ -1,0 +1,11 @@
+.times_new_roman {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.card {
+    background-image: url('../../../assets/team-bg.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    background-color: rgb(255, 255, 255);
+}

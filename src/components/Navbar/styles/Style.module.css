@@ -1,0 +1,18 @@
+.underlined {
+    position: relative;
+    display: inline-block !important;
+  }
+  
+  .underlined::before {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    height: 8px;
+    width: 100% !important;
+    transform: rotate(-2deg);
+    border: solid 4px black;
+    border-color: black transparent transparent transparent;
+    border-radius: 50%;
+  }
+  
