@@ -12,8 +12,8 @@ const Aim = () => {
         </div>
       </div>
       <div className="flex md:grid md:grid-cols-3 gap-5 items-center justify-center flex-col md:flex-row">
-        <div className="flex p-10  shadow-xl rounded-md  bg-white">
-          <div className="flex flex-col justify-center gap-2">
+        <div className="flex p-10  shadow-xl rounded-md  bg-white h-full">
+          <div className="flex flex-col justify-start gap-2">
             <p className="text-xl font-bold">01</p>
             <h1 className="text-3xl font-bold">Venture Capital</h1>
             <p className="text-lg font-light pt-8">
@@ -25,8 +25,8 @@ const Aim = () => {
             </p>
           </div>
         </div>
-        <div className="flex p-10  shadow-xl rounded-md bg-white ">
-          <div className="flex flex-col justify-center gap-2">
+        <div className="flex p-10  shadow-xl rounded-md bg-white h-full">
+          <div className="flex flex-col justify-start gap-2">
             <p className="text-xl font-bold ">02</p>
             <h1 className="text-3xl font-bold">Seed Funding</h1>
             <p className="text-lg font-light pt-8">
@@ -39,8 +39,8 @@ const Aim = () => {
             </p>
           </div>
         </div>
-        <div className="flex p-10  shadow-xl rounded-md bg-white">
-          <div className="flex flex-col justify-center gap-2">
+        <div className="flex p-10  shadow-xl rounded-md bg-white h-full">
+          <div className="flex flex-col justify-start gap-2">
             <p className="text-xl font-bold">03</p>
             <h1 className="text-3xl font-bold">Private Equity</h1>
             <p className="text-lg font-light pt-8">
