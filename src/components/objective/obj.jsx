@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import CountUp from "react-countup";
 
+
 const Obj = () => {
   const triggerRef = useRef(null);
   const [inView, setInView] = useState(false);
@@ -54,6 +55,7 @@ const Obj = () => {
           </div>
         </div>
       </div>
+
     </div>
   );
 };

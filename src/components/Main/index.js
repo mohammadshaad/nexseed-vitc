@@ -56,7 +56,7 @@ const Main = () => {
 
           <Aim />
           <Obj />
-          <Focus />
+          {/* <Focus /> */}
         </div>
       </div>
 

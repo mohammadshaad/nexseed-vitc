@@ -7,6 +7,7 @@ import val4 from '../../assets/values/4.png'
 import val5 from '../../assets/values/5.png'
 import val6 from '../../assets/values/6.png'
 import Team from '../../components/Team'
+import { motion } from "framer-motion";
 
 const index = () => {
 
@@ -50,7 +51,11 @@ const index = () => {
       <Navbar />
 
       <div className="flex items-center justify-center flex-col gap-10 relative top-24 md:top-20">
-        <div className="flex items-center justify-center flex-col p-5 md:p-10 gap-4 text-center ">
+        <motion.div
+          className="flex items-center justify-center flex-col p-5 md:p-10 gap-4 text-center"
+          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 50 }}
+        >
           <h1 className="text-xs md:text-sm font-medium text-[#1E90FF] font-serif">
             About Us
           </h1>
@@ -60,24 +65,50 @@ const index = () => {
           <h3 className="text-sm md:text-base text-center font-light max-w-5xl text-gray-500 leading-relaxed md:mt-3">
             At NexSeed, we believe that entrepreneurship is about more than just starting a business. It's about creativity, problem-solving, and making a positive impact in the world. We invite you to join us and be part of the next generation of entrepreneurs.
           </h3>
-        </div>
+        </motion.div>
 
-        <div className={`py-10 md:py-10 px-5 md:px-40 grid md:grid-cols-2 w-full grid-rows-1 gap-6 max-w-6xl rounded-lg`}>
-          <div className="flex items-center md:items-start justify-center flex-col gap-5">
-            <hr className="border border-gray-700 w-[140px] md:w-[200px]" />
-            <div className="flex items-start justify-start h-full flex-col gap-2">
-              <h3 className="text-2xl md:text-5xl font-semibold font-serif">
+
+        <motion.div
+          className={`py-10 md:py-10 px-5 md:px-40 grid md:grid-cols-2 w-full grid-rows-1 gap-6 max-w-6xl rounded-lg`}
+          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: -50 }}
+        >
+          <motion.div
+            className="flex items-center md:items-start justify-center flex-col gap-5"
+            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 50 }}
+          >
+            <motion.hr
+              className="border border-gray-700 w-[140px] md:w-[200px]"
+              animate={{ width: "200px", opacity: 1 }}
+              initial={{ width: "140px", opacity: 0 }}
+            />
+            <motion.div
+              className="flex items-start justify-start h-full flex-col gap-2"
+              animate={{ y: 0, opacity: 1 }}
+              initial={{ y: 50, opacity: 0 }}
+            >
+              <motion.h3
+                className="text-2xl md:text-5xl font-semibold font-serif"
+                animate={{ y: 0, opacity: 1 }}
+                initial={{ y: 50, opacity: 0 }}
+              >
                 Our Story?
-              </h3>
-              <p className="text-gray-500 text-xs md:text-sm">
+              </motion.h3>
+              <motion.p
+                className="text-gray-500 text-xs md:text-sm"
+                animate={{ y: 0, opacity: 1 }}
+                initial={{ y: 50, opacity: 0 }}
+              >
                 Why we started it?
-              </p>
-            </div>
+              </motion.p>
+            </motion.div>
+          </motion.div>
 
-
-          </div>
-
-          <div>
+          <motion.div
+            animate={{ x: 0, opacity: 1 }}
+            initial={{ x: 50, opacity: 0 }}
+          >
             <p className="text-base font-normal text-gray-700 text-justify">
               Welcome to NexSeed, the entrepreneurship club at VIT Chennai! We are a group of driven individuals who are passionate about entrepreneurship and innovation. Our mission is to foster an entrepreneurial culture on campus and to provide resources, support, and inspiration for aspiring entrepreneurs.
 
@@ -91,10 +122,9 @@ const index = () => {
 
               Our club is made up of students from a diverse range of backgrounds and fields of study, all united by a common goal of pursuing their entrepreneurial dreams. We believe that everyone has the potential to be an entrepreneur, and we are here to help you realize that potential.
             </p>
-          </div>
+          </motion.div>
+        </motion.div>
 
-
-        </div>
 
 
         <div>
