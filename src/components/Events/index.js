@@ -23,14 +23,16 @@ function index() {
                         </div>
 
                         <div className='flex items-start justify-start gap-4 flex-col md:flex-row '>
-                            <Card past={false} />
-                            <Card past={false} />
-                            <Card past={false} />
+                            {/* <Card past={false} /> */}
+
                         </div>
+                        <h2 classname='text-gray-300 text-2xl font-thin'>
+                            No upcoming events
+                        </h2>
 
                     </div>
 
-                    <hr className='mt-10'/>
+                    <hr className='mt-10' />
 
                     <div className='p-5 flex items-center md:items-start justify-center gap-10 flex-col mt-6'>
                         <div className='text-3xl font-semibold'>
@@ -38,9 +40,7 @@ function index() {
                         </div>
 
                         <div className='flex items-start justify-start gap-4 flex-col md:flex-row '>
-                            <Card past={true}/>
-                            <Card past={true}/>
-                            <Card past={true}/>
+                            <Card past={true} />
                         </div>
 
                     </div>
