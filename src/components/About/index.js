@@ -192,7 +192,6 @@ const index = () => {
 
         </motion.div>
 
-        );
       </div>
     </div>
   )
