@@ -44,10 +44,9 @@ const index = () => {
     },
   ];
 
-  // 
 
   return (
-    <>
+    <div>
       <Navbar />
 
       <div className="flex items-center justify-center flex-col gap-10 relative top-24 md:top-20">
@@ -127,51 +126,76 @@ const index = () => {
 
 
 
-        <div>
-          <div className="flex items-center justify-center flex-col p-5 md:p-10 gap-4 text-center">
-            <h1 className="text-xs md:text-sm font-medium text-[#1E90FF] font-serif">
-              Our Values
-            </h1>
-            <h2 className="text-2xl md:text-4xl font-normal md:leading-normal font-serif">
-              We're an ambitious and smart team <br /> with a shared mission
-            </h2>
-            <h3 className="text-sm md:text-base font-light text-center max-w-5xl text-gray-500 md:mt-3">
-              Our shared values keep us connected and guide us as one team
-            </h3>
-          </div>
+        <motion.div
 
-          <div className="grid md:grid-cols-3 md:grid-rows-2 p-10 gap-10 max-w-7xl">
+          initial="hidden"
+          animate="visible"
+          className="pt-20 pb-10 px-5 md:px-10 lg:px-20 xl:px-32"
+        >
+
+          <motion.div >
+            <div className="flex items-center justify-center flex-col gap-4 text-center">
+              <h1 className="text-xs md:text-sm font-medium text-[#1E90FF] font-serif">
+                Our Values
+              </h1>
+              <h2 className="text-2xl md:text-4xl font-normal md:leading-normal font-serif">
+                We're an ambitious and smart team <br /> with a shared mission
+              </h2>
+              <h3 className="text-sm md:text-base font-light text-center max-w-5xl text-gray-500 md:mt-3">
+                Our shared values keep us connected and guide us as one team
+              </h3>
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 p-10 gap-10 max-w-7xl"
+          >
             {values.map((ele, i) => (
-              <div className="flex items-center justify-center flex-col gap-2 text-center">
+              <div key={ele.title} className="flex items-center justify-center flex-col gap-2 text-center">
                 <img src={`${ele.image}`} alt="" />
-                <h4 className="">
-                  {ele.title}
-                </h4>
-                <p className="font-light text-sm text-gray-500 w-11/12">
-                  {ele.description}
-                </p>
+                <h4 className="">{ele.title}</h4>
+                <p className="font-light text-sm text-gray-500 w-11/12">{ele.description}</p>
               </div>
             ))}
-          </div>
-        </div>
+          </motion.div>
 
-        <div>
-          <div className="flex items-center justify-center flex-col p-5 md:p-10 gap-4 text-center">
-            <h1 className="text-xs md:text-sm font-medium text-[#1E90FF] font-serif">
-              Our Founders
-            </h1>
-            <h2 className="text-2xl md:text-4xl font-normal md:leading-normal font-serif">
-              Meet our team
-            </h2>
-          </div>
 
-          <div>
-            <Team />
-          </div>
-        </div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className='flex items-center justify-center flex-col'
+          >
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+              className='flex items-center justify-center flex-col p-5 md:p-10 gap-4 text-center'
+            >
+              <h1 className='text-xs md:text-sm font-medium text-[#1E90FF] font-serif'>
+                Our Founders
+              </h1>
+              <h2 className='text-2xl md:text-4xl font-normal md:leading-normal font-serif'>
+                Meet our team
+              </h2>
+            </motion.div>
 
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.7, duration: 0.5 }}
+            >
+              <Team />
+            </motion.div>
+          </motion.div>
+
+
+        </motion.div>
+
+        );
       </div>
-    </>
-  );
-};
+    </div>
+  )
+}
+
 export default index;
