@@ -20,7 +20,7 @@ const index = () => {
     {
       image: val2,
       title: "Be excellent to each other",
-      description: "No games. No bullshit. We rely on our peers to improve. Be open, honest and kind"
+      description: "No games. We rely on our peers to improve. Be open, honest and kind"
     },
     {
       image: val3,
